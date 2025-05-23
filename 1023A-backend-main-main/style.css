@@ -1,0 +1,152 @@
+body {
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+    margin: 20px;
+    padding: 10px;
+    text-align: center;
+    background-color: #b1e0f3; /*cor base */
+}
+
+/* Botões */
+.button-container {
+    margin-bottom: 20px;
+}
+
+.button-container a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #ffb6c1; /* botao cadatrar */
+    color: black;
+    border-radius: 5px;
+    margin: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.button-container a:hover {
+    background-color: #f11cd5; /* ao passar o mouse no botao */
+}
+
+
+/* Tabelas */
+table {
+    width: 80%;
+    margin: 10px auto;
+    border-collapse: collapse;
+    background-color: #e7e8ec;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+th, td {
+    border: 1px solid #a7a1a1;
+    padding: 10px;
+    text-align: left;
+    font-size: 16px;
+    color: black;
+}
+
+th {
+    background-color: #8bdee9; 
+}
+
+/* Cabeçalhos */
+h1 {
+    color: black;
+    font-size: 28px;
+}
+
+h2 {
+    color: black;
+    font-size: 22px;
+}
+
+
+/*style do cadastro de tarefas/
+
+/* Formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+    gap: 10px;
+    background-color: #4fd1d1;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Campos de entrada */
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+}
+
+
+/* Lista de tarefas */
+ul#listaTarefas {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 0;
+    list-style-type: none;
+}
+
+ul#listaTarefas li {
+    background-color: #60bbbb;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(21, 160, 33, 0.1);
+}
+
+
+/*style pra diciplina/
+
+/* Estilo geral */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    padding: 20px;
+    color: #ffffff;
+}
+
+
+
+/* Formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+/* Botão de envio */
+form button {
+    padding: 10px;
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+ul#listaDisciplinas {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 0;
+    list-style-type: none;
+}
+
+ul#listaDisciplinas li {
+    background-color: #60bbbb;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}

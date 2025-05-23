@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Disciplinas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Cadastro de Disciplinas</h1>
+
+    <form id="formDisciplina">
+        <input type="text" id="materia" placeholder="Matéria" required>
+        <input type="text" id="professor" placeholder="Professor" required>
+        <input type="text" id="curso" placeholder="Curso" required>
+        <button type="submit">Cadastrar</button>
+    </form>
+
+    <h2>Lista de Disciplinas</h2>
+    <ul id="listaDisciplinas"></ul>
+
+    <script>
+        const form = document.getElementById('formDisciplina');
+        const lista = document.getElementById('listaDisciplinas');
+
+        async function carregarDisciplinas() {
+            const resposta = await fetch('http://localhost:8000/disciplinas');
+            const dados = await resposta.json();
+
+            lista.innerHTML = '';
+            dados.forEach(d => {
+                const li = document.createElement('li');
+                li.textContent = `Matéria: ${d.materia}, Professor: ${d.professor}, Curso: ${d.curso}`;
+                lista.appendChild(li);
+            });
+        }
+
+        form.onsubmit = async (event) => {
+            event.preventDefault();
+
+            const materia = document.getElementById('materia').value;
+            const professor = document.getElementById('professor').value;
+            const curso = document.getElementById('curso').value;
+
+            const resposta = await fetch('http://localhost:8000/disciplinas', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ materia, professor, curso })
+            });
+
+            if (resposta.status === 201) {
+                alert("Disciplina cadastrada com sucesso!");
+                carregarDisciplinas();
+                form.reset();
+            } else {
+                const erro = await resposta.json();
+                alert(erro.mensagem);
+            }
+        };
+
+        carregarDisciplinas();
+    </script>
+</body>
+</html>
