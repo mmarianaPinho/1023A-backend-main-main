@@ -25,7 +25,7 @@ body {
 }
 
 .button-container a:hover {
-    background-color: #f11cd5; /* ao passar o mouse no botao */
+    background-color: #e4178f; /* ao passar o mause no botao */
 }
 
 
@@ -47,23 +47,12 @@ th, td {
     color: black;
 }
 
+/* Fundo pastel para os cabeçalhos das tabelas */
 th {
-    background-color: #8bdee9; 
+    background-color: #8bdee9; /* Azul pastel */
 }
 
-/* Cabeçalhos */
-h1 {
-    color: black;
-    font-size: 28px;
-}
-
-h2 {
-    color: black;
-    font-size: 22px;
-}
-
-
-/*style do cadastro de tarefas/
+/*cadastor/
 
 /* Formulário */
 form {
@@ -72,19 +61,12 @@ form {
     max-width: 400px;
     margin: 0 auto;
     gap: 10px;
-    background-color: #4fd1d1;
+    background-color: #68c9c9;
     padding: 20px;
     border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    
 }
-
-/* Campos de entrada */
-input[type="text"] {
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #000000;
-    border-radius: 5px;
-}
-
 
 /* Lista de tarefas */
 ul#listaTarefas {
@@ -99,51 +81,44 @@ ul#listaTarefas li {
     margin-bottom: 10px;
     padding: 15px;
     border-radius: 6px;
-    box-shadow: 0 1px 3px rgba(21, 160, 33, 0.1);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 
 
-/*style pra diciplina/
+
 
 /* Estilo geral */
 body {
     font-family: Arial, sans-serif;
     background-color: #ffffff;
     padding: 20px;
-    color: #ffffff;
+    color: #000000;
 }
 
 
-
+/*diisciplina/
+/* Formulário */
 /* Formulário */
 form {
     display: flex;
     flex-direction: column;
-    max-width: 500px;
+    max-width: 400px;
     gap: 10px;
     margin-bottom: 20px;
+    background-color: #68c9c9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* Botão de envio */
-form button {
-    padding: 10px;
-    background-color: #000000;
-    color: rgb(255, 255, 255);
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-ul#listaDisciplinas {
+ul {
     max-width: 600px;
     margin: 20px auto;
     padding: 0;
     list-style-type: none;
 }
 
-ul#listaDisciplinas li {
+ul li {
     background-color: #60bbbb;
     margin-bottom: 10px;
     padding: 15px;
